@@ -149,7 +149,6 @@ class MyTestsDependOnDarksky extends TestCase {
 
 ### Credits
 
-- [Jack Naughton][link-author]
 - [All Contributors][link-contributors]
 
 ### License
