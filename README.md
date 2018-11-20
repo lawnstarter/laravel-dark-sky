@@ -136,11 +136,11 @@ class MyTestsDependOnDarksky extends TestCase {
 
 ```
 
-| Method                                                | Sample Payload                                                                                    |
-|-------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-| ```DarkSkySampleResponse::forecast()```               | [See Sample Forecast JSON](./blob/master/resources/forecast.json)                                 |
-| ```DarkSkySampleResponse::forecastExtendedHourly()``` | [See Sample Forecast Extended Hourly JSON](./blob/master/resources/forecast_extended_hourly.json) |
-| ```DarkSkySampleResponse::timemachine()```            | [See Sample Time Machine JSON](./blob/master/resources/timemachine.json)                          |
+| Method                                                | Sample Payload                                                                                                                                 |
+|-------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| ```DarkSkySampleResponse::forecast()```               | [See Sample Forecast JSON](https://github.com/lawnstarter/laravel-darksky/blob/master/resources/forecast.json)                                 |
+| ```DarkSkySampleResponse::forecastExtendedHourly()``` | [See Sample Forecast Extended Hourly JSON](https://github.com/lawnstarter/laravel-darksky/blob/master/resources/forecast_extended_hourly.json) |
+| ```DarkSkySampleResponse::timemachine()```            | [See Sample Time Machine JSON](https://github.com/lawnstarter/laravel-darksky/blob/master/resources/timemachine.json)                          |
 
 
 
