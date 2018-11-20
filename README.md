@@ -9,7 +9,7 @@ For more information regarding request and response formats, visit: https://dark
 Require this package with composer using the following command:
 
 ``` bash
-$ composer require naughtonium/laravel-dark-sky
+$ composer require lawnstarter/laravel-darksky
 ```
 
 
