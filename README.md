@@ -94,6 +94,59 @@ For example, these two statements are the same
 DarkSky::location(lat, lon)->hourly()
 DarkSky::location(lat, lon)->includes(['hourly'])->get()->hourly
 ```
+
+### DarkSky & Testing
+To simplyfiy testing the static method to force the response to be a certain payload without actually hitting the DarkSky API was added.
+
+```php
+DarkSky::setTestResponse($testResponseValue);
+```
+
+When this value is not null, the DarkSky wrapper will always return this data. If the value is null, the DarkSky API will be queried in real-time.
+To simplify testing further, sample test responses are available for you to use in your test classes
+
+```php
+<?php
+
+use Naughtonium\LaravelDarkSky\DarkSkySampleResponse;
+use Naughtonium\LaravelDarkSky\DarkSky;
+
+class MyTestsDependOnDarksky extends TestCase {
+
+    public function test_forecast() {
+        ...
+        $fakeForecast = DarkSkySampleResponse::forecast();
+        DarkSky::setTestResponse($fakeForecast);
+        ...
+    }
+
+    public function test_forecast_extended_hourly() {
+        ...
+        $fakeForecast = DarkSkySampleResponse::forecastExtendedHourly();
+        DarkSky::setTestResponse($fakeForecast);
+        ...
+    }
+
+    public function test_timemachine() {
+        ...
+        $fakeForecast = DarkSkySampleResponse::timemachine();
+        DarkSky::setTestResponse($fakeForecast);
+        ...
+    }
+
+}
+
+```
+
+| Method | Sample Payload |
+|---|---|
+| ```DarkSkySampleResponse::forecast()``` | [See Sample Forecast JSON](../resources/forecast.json) |
+| ```DarkSkySampleResponse::forecastExtendedHourly()```  | [See Sample Forecast Extended Hourly JSON](../resources/forecast_extended_hourly.json) |
+| ```DarkSkySampleResponse::timemachine()```  | [See Sample Time Machine JSON](../resources/timemachine.json) |
+
+
+
+
 ### Credits
 
 - [Jack Naughton][link-author]
