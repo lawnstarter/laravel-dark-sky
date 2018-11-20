@@ -1,10 +1,8 @@
 ## Laravel DarkSky
-[![Latest Stable Version](https://poser.pugx.org/naughtonium/laravel-dark-sky/v/stable)](https://packagist.org/packages/naughtonium/laravel-dark-sky)
 [![Software License][ico-license]](LICENSE.md)
-[![Total Downloads](https://poser.pugx.org/naughtonium/laravel-dark-sky/downloads)](https://packagist.org/packages/naughtonium/laravel-dark-sky)
 
-This provides a Laravel style wrapper for the DarkSky api. For more information regarding request and response formats, visit: https://darksky.net/dev/docs
-
+This provides a Laravel style wrapper for the DarkSky api and simplifies writing tests against ever changing weather data.
+For more information regarding request and response formats, visit: https://darksky.net/dev/docs
 
 ### Install
 
@@ -18,12 +16,12 @@ $ composer require naughtonium/laravel-dark-sky
 After updating composer, add the service provider to the `providers` array in `config/app.php`
 
 ```php
-Naughtonium\LaravelDarkSky\LaravelDarkSkyServiceProvider::class,
+Lawnstarter\LaravelDarkSky\LaravelDarkSkyServiceProvider::class,
 ```
 
 To register a facade accessor, add the following to `config/app.php` `aliases` array
 ```php
-'DarkSky' => \Naughtonium\LaravelDarkSky\Facades\DarkSky::class,
+'DarkSky' => \Lawnstarter\LaravelDarkSky\Facades\DarkSky::class,
 ```
 
 ### Configuration
@@ -108,8 +106,8 @@ To simplify testing further, sample test responses are available for you to use 
 ```php
 <?php
 
-use Naughtonium\LaravelDarkSky\DarkSkySampleResponse;
-use Naughtonium\LaravelDarkSky\DarkSky;
+use Lawnstarter\LaravelDarkSky\DarkSkySampleResponse;
+use Lawnstarter\LaravelDarkSky\DarkSky;
 
 class MyTestsDependOnDarksky extends TestCase {
 
@@ -138,11 +136,11 @@ class MyTestsDependOnDarksky extends TestCase {
 
 ```
 
-| Method | Sample Payload |
-|---|---|
-| ```DarkSkySampleResponse::forecast()``` | [See Sample Forecast JSON](./blob/master/resources/forecast.json) |
-| ```DarkSkySampleResponse::forecastExtendedHourly()```  | [See Sample Forecast Extended Hourly JSON](./blob/master/resources/forecast_extended_hourly.json) |
-| ```DarkSkySampleResponse::timemachine()```  | [See Sample Time Machine JSON](./blob/master/resources/timemachine.json) |
+| Method                                                | Sample Payload                                                                                    |
+|-------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| ```DarkSkySampleResponse::forecast()```               | [See Sample Forecast JSON](./blob/master/resources/forecast.json)                                 |
+| ```DarkSkySampleResponse::forecastExtendedHourly()``` | [See Sample Forecast Extended Hourly JSON](./blob/master/resources/forecast_extended_hourly.json) |
+| ```DarkSkySampleResponse::timemachine()```            | [See Sample Time Machine JSON](./blob/master/resources/timemachine.json)                          |
 
 
 
@@ -156,5 +154,4 @@ class MyTestsDependOnDarksky extends TestCase {
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[link-author]: https://github.com/holiehandgrenade
 [link-contributors]: ../../contributors
