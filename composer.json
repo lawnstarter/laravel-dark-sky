@@ -47,10 +47,10 @@
         },
         "laravel": {
             "providers": [
-                "Lawnstarter\LaravelDarkSky\LaravelDarkSkyServiceProvider"
+                "Lawnstarter\\LaravelDarkSky\\LaravelDarkSkyServiceProvider"
             ],
             "aliases": {
-                "DarkSky": "Lawnstarter\LaravelDarkSky\Facades\DarkSky"
+                "DarkSky": "Lawnstarter\\LaravelDarkSky\\Facades\\DarkSky"
             }
         }
     },
