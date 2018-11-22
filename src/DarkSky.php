@@ -44,7 +44,7 @@ class DarkSky
     public function get()
     {
         if (!is_null(self::$testResponse)) {
-            return $testResponse;
+            return self::$testResponse;
         }
 
         $url = $this->endpoint  . '/' . $this->lat . ',' . $this->lon;
